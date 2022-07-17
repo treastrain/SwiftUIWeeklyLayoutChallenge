@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB0D88A2288279C800E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */ = {isa = PBXBuildFile; productRef = CB0D88A1288279C800E61609 /* SwiftUIWeeklyLayoutChallenge */; };
+		CB0D88A4288279D200E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */ = {isa = PBXBuildFile; productRef = CB0D88A3288279D200E61609 /* SwiftUIWeeklyLayoutChallenge */; };
+		CB0D88A6288279D900E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */ = {isa = PBXBuildFile; productRef = CB0D88A5288279D900E61609 /* SwiftUIWeeklyLayoutChallenge */; };
+		CB0D88A8288279E200E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */ = {isa = PBXBuildFile; productRef = CB0D88A7288279E200E61609 /* SwiftUIWeeklyLayoutChallenge */; };
+		CB5D435A2881DADD001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */; };
+		CB5D435B2881DADD001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */; };
+		CB5D435C2881DADE001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */; };
+		CB5D435D2881DADF001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */; };
+		CB5D435E2881DAE8001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB5D435F2881DAE9001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB5D43602881DAE9001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB5D43612881DAEA001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB5D43622881DAEA001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB5D43632881DAEB001B5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5D43562881DAD1001B5EA1 /* Assets.xcassets */; };
+		CB7F7B13287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CB7F7B12287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB7F7B1E287DEEF800E789D3 /* watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB7F7B1D287DEEF800E789D3 /* watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB7F7B14287DEEF700E789D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB7F7AEA287DEEC500E789D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB7F7B11287DEEF700E789D3;
+			remoteInfo = "SwiftUIWeeklyLayoutChallenge (watchOS) WatchKit App";
+		};
+		CB7F7B1F287DEEF800E789D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB7F7AEA287DEEC500E789D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB7F7B1C287DEEF800E789D3;
+			remoteInfo = "SwiftUIWeeklyLayoutChallenge (watchOS) WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB7F7B31287DEEF900E789D3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CB7F7B1E287DEEF800E789D3 /* watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B35287DEEF900E789D3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CB7F7B13287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CB5D43372881C744001B5EA1 /* SwiftUIWeeklyLayoutChallenge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIWeeklyLayoutChallenge; sourceTree = "<group>"; };
+		CB5D434C2881D4DB001B5EA1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CB5D43552881DAD1001B5EA1 /* watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = watchOS.plist; sourceTree = "<group>"; };
+		CB5D43562881DAD1001B5EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Disambiguator.xcconfig; sourceTree = "<group>"; };
+		CB5D43582881DAD1001B5EA1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWeeklyLayoutChallengeApp.swift; sourceTree = "<group>"; };
+		CB7F7AF6287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWeeklyLayoutChallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7F7AFC287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWeeklyLayoutChallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7F7B0F287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWeeklyLayoutChallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7F7B12287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIWeeklyLayoutChallengeApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7F7B1D287DEEF800E789D3 /* watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB7F7B41287DF16600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWeeklyLayoutChallengeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB7F7AF3287DEEC600E789D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0D88A2288279C800E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7AF9287DEEC600E789D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0D88A4288279D200E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B1A287DEEF800E789D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0D88A8288279E200E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B3E287DF16600E789D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0D88A6288279D900E61609 /* SwiftUIWeeklyLayoutChallenge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB5D43392881CE88001B5EA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB5D43542881DAD1001B5EA1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CB5D43592881DAD1001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift */,
+				CB5D43562881DAD1001B5EA1 /* Assets.xcassets */,
+				CB5D43582881DAD1001B5EA1 /* macOS.entitlements */,
+				CB5D43552881DAD1001B5EA1 /* watchOS.plist */,
+				CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CB7F7AE9287DEEC500E789D3 = {
+			isa = PBXGroup;
+			children = (
+				CB5D434C2881D4DB001B5EA1 /* README.md */,
+				CB5D43372881C744001B5EA1 /* SwiftUIWeeklyLayoutChallenge */,
+				CB5D43542881DAD1001B5EA1 /* Configuration */,
+				CB7F7AF7287DEEC600E789D3 /* Products */,
+				CB5D43392881CE88001B5EA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CB7F7AF7287DEEC600E789D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F7AF6287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */,
+				CB7F7AFC287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */,
+				CB7F7B0F287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */,
+				CB7F7B12287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app */,
+				CB7F7B1D287DEEF800E789D3 /* watchOS WatchKit Extension.appex */,
+				CB7F7B41287DF16600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB7F7AF5287DEEC600E789D3 /* iOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B07287DEEC600E789D3 /* Build configuration list for PBXNativeTarget "iOS App" */;
+			buildPhases = (
+				CB7F7AF2287DEEC600E789D3 /* Sources */,
+				CB7F7AF3287DEEC600E789D3 /* Frameworks */,
+				CB7F7AF4287DEEC600E789D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS App";
+			packageProductDependencies = (
+				CB0D88A1288279C800E61609 /* SwiftUIWeeklyLayoutChallenge */,
+			);
+			productName = "SwiftUIWeeklyLayoutChallenge (iOS)";
+			productReference = CB7F7AF6287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB7F7AFB287DEEC600E789D3 /* macOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B0A287DEEC600E789D3 /* Build configuration list for PBXNativeTarget "macOS App" */;
+			buildPhases = (
+				CB7F7AF8287DEEC600E789D3 /* Sources */,
+				CB7F7AF9287DEEC600E789D3 /* Frameworks */,
+				CB7F7AFA287DEEC600E789D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macOS App";
+			packageProductDependencies = (
+				CB0D88A3288279D200E61609 /* SwiftUIWeeklyLayoutChallenge */,
+			);
+			productName = "SwiftUIWeeklyLayoutChallenge (macOS)";
+			productReference = CB7F7AFC287DEEC600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB7F7B0E287DEEF700E789D3 /* watchOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B36287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS App" */;
+			buildPhases = (
+				CB7F7B0D287DEEF700E789D3 /* Resources */,
+				CB7F7B35287DEEF900E789D3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB7F7B15287DEEF700E789D3 /* PBXTargetDependency */,
+			);
+			name = "watchOS App";
+			productName = "SwiftUIWeeklyLayoutChallenge (watchOS)";
+			productReference = CB7F7B0F287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		CB7F7B11287DEEF700E789D3 /* watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B32287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS WatchKit App" */;
+			buildPhases = (
+				CB7F7B10287DEEF700E789D3 /* Resources */,
+				CB7F7B31287DEEF900E789D3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB7F7B20287DEEF800E789D3 /* PBXTargetDependency */,
+			);
+			name = "watchOS WatchKit App";
+			productName = "SwiftUIWeeklyLayoutChallenge (watchOS) WatchKit App";
+			productReference = CB7F7B12287DEEF700E789D3 /* SwiftUIWeeklyLayoutChallengeApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CB7F7B1C287DEEF800E789D3 /* watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B2E287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS WatchKit Extension" */;
+			buildPhases = (
+				CB7F7B19287DEEF800E789D3 /* Sources */,
+				CB7F7B1A287DEEF800E789D3 /* Frameworks */,
+				CB7F7B1B287DEEF800E789D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchOS WatchKit Extension";
+			packageProductDependencies = (
+				CB0D88A7288279E200E61609 /* SwiftUIWeeklyLayoutChallenge */,
+			);
+			productName = "SwiftUIWeeklyLayoutChallenge (watchOS) WatchKit Extension";
+			productReference = CB7F7B1D287DEEF800E789D3 /* watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		CB7F7B40287DF16600E789D3 /* tvOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7F7B4C287DF16700E789D3 /* Build configuration list for PBXNativeTarget "tvOS App" */;
+			buildPhases = (
+				CB7F7B3D287DF16600E789D3 /* Sources */,
+				CB7F7B3E287DF16600E789D3 /* Frameworks */,
+				CB7F7B3F287DF16600E789D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tvOS App";
+			packageProductDependencies = (
+				CB0D88A5288279D900E61609 /* SwiftUIWeeklyLayoutChallenge */,
+			);
+			productName = "SwiftUIWeeklyLayoutChallenge (tvOS)";
+			productReference = CB7F7B41287DF16600E789D3 /* SwiftUIWeeklyLayoutChallengeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB7F7AEA287DEEC500E789D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CB7F7AF5287DEEC600E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB7F7AFB287DEEC600E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB7F7B0E287DEEF700E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB7F7B11287DEEF700E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB7F7B1C287DEEF800E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CB7F7B40287DF16600E789D3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CB7F7AED287DEEC500E789D3 /* Build configuration list for PBXProject "SwiftUIWeeklyLayoutChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB7F7AE9287DEEC500E789D3;
+			productRefGroup = CB7F7AF7287DEEC600E789D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB7F7AF5287DEEC600E789D3 /* iOS App */,
+				CB7F7AFB287DEEC600E789D3 /* macOS App */,
+				CB7F7B40287DF16600E789D3 /* tvOS App */,
+				CB7F7B0E287DEEF700E789D3 /* watchOS App */,
+				CB7F7B11287DEEF700E789D3 /* watchOS WatchKit App */,
+				CB7F7B1C287DEEF800E789D3 /* watchOS WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB7F7AF4287DEEC600E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435E2881DAE8001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7AFA287DEEC600E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435F2881DAE9001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B0D287DEEF700E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D43612881DAEA001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B10287DEEF700E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D43622881DAEA001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B1B287DEEF800E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D43632881DAEB001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B3F287DF16600E789D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D43602881DAE9001B5EA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB7F7AF2287DEEC600E789D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435A2881DADD001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7AF8287DEEC600E789D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435B2881DADD001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B19287DEEF800E789D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435D2881DADF001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB7F7B3D287DF16600E789D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5D435C2881DADE001B5EA1 /* SwiftUIWeeklyLayoutChallengeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB7F7B15287DEEF700E789D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB7F7B11287DEEF700E789D3 /* watchOS WatchKit App */;
+			targetProxy = CB7F7B14287DEEF700E789D3 /* PBXContainerItemProxy */;
+		};
+		CB7F7B20287DEEF800E789D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB7F7B1C287DEEF800E789D3 /* watchOS WatchKit Extension */;
+			targetProxy = CB7F7B1F287DEEF800E789D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CB7F7B05287DEEC600E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB7F7B06287DEEC600E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CB7F7B08287DEEC600E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB7F7B09287DEEC600E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB7F7B0B287DEEC600E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Configuration/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB7F7B0C287DEEC600E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Configuration/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CB7F7B2F287DEEF900E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/watchOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftUIWeeklyLayoutChallengeApp WatchKit Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		CB7F7B30287DEEF900E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/watchOS.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftUIWeeklyLayoutChallengeApp WatchKit Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		CB7F7B33287DEEF900E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SwiftUIWeeklyLayoutChallenge__watchOS__WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}.watchkitapp";
+				PRODUCT_NAME = "SwiftUIWeeklyLayoutChallengeApp WatchKit App";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		CB7F7B34287DEEF900E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = SwiftUIWeeklyLayoutChallenge__watchOS__WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}.watchkitapp";
+				PRODUCT_NAME = "SwiftUIWeeklyLayoutChallengeApp WatchKit App";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		CB7F7B37287DEEF900E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CB7F7B38287DEEF900E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB7F7B4D287DF16700E789D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		CB7F7B4E287DF16700E789D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5D43572881DAD1001B5EA1 /* Disambiguator.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.jp.tret.SwiftUIWeeklyLayoutChallengeApp${DISAMBIGUATOR}";
+				PRODUCT_NAME = SwiftUIWeeklyLayoutChallengeApp;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB7F7AED287DEEC500E789D3 /* Build configuration list for PBXProject "SwiftUIWeeklyLayoutChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B05287DEEC600E789D3 /* Debug */,
+				CB7F7B06287DEEC600E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B07287DEEC600E789D3 /* Build configuration list for PBXNativeTarget "iOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B08287DEEC600E789D3 /* Debug */,
+				CB7F7B09287DEEC600E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B0A287DEEC600E789D3 /* Build configuration list for PBXNativeTarget "macOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B0B287DEEC600E789D3 /* Debug */,
+				CB7F7B0C287DEEC600E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B2E287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B2F287DEEF900E789D3 /* Debug */,
+				CB7F7B30287DEEF900E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B32287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B33287DEEF900E789D3 /* Debug */,
+				CB7F7B34287DEEF900E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B36287DEEF900E789D3 /* Build configuration list for PBXNativeTarget "watchOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B37287DEEF900E789D3 /* Debug */,
+				CB7F7B38287DEEF900E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7F7B4C287DF16700E789D3 /* Build configuration list for PBXNativeTarget "tvOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7F7B4D287DF16700E789D3 /* Debug */,
+				CB7F7B4E287DF16700E789D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB0D88A1288279C800E61609 /* SwiftUIWeeklyLayoutChallenge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIWeeklyLayoutChallenge;
+		};
+		CB0D88A3288279D200E61609 /* SwiftUIWeeklyLayoutChallenge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIWeeklyLayoutChallenge;
+		};
+		CB0D88A5288279D900E61609 /* SwiftUIWeeklyLayoutChallenge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIWeeklyLayoutChallenge;
+		};
+		CB0D88A7288279E200E61609 /* SwiftUIWeeklyLayoutChallenge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIWeeklyLayoutChallenge;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CB7F7AEA287DEEC500E789D3 /* Project object */;
+}
