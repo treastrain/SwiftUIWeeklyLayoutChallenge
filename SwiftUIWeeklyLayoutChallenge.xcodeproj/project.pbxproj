@@ -311,10 +311,10 @@
 			};
 			buildConfigurationList = CB7F7AED287DEEC500E789D3 /* Build configuration list for PBXProject "SwiftUIWeeklyLayoutChallenge" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				ja,
 				Base,
 			);
 			mainGroup = CB7F7AE9287DEEC500E789D3;
