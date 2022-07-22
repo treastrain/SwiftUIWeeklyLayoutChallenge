@@ -37,12 +37,43 @@ public struct Topic002View: View {
     public init() {}
     
     public var body: some View {
-        Text("Code your layout here!")
+        NavigationView {
+            List {
+                ForEach(vitalData, id: \.id) { vital in
+                    NavigationLink(destination: EmptyView()) {
+                        Topic002ListRowView(vital: vital)
+                    }
+                }
+            }
+//            .navigationTitle("バイタルデータ")
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Topic002View_Previews: PreviewProvider {
     static var previews: some View {
         Topic002View()
+    }
+}
+
+private struct Topic002ListRowView: View {
+    let vital: Vital
+    
+    var body: some View {
+        HStack {
+            Image(systemName: vital.iconSystemName)
+            Text(vital.title)
+        }
+        .foregroundColor(vital.color)
+    }
+}
+
+struct Topic002ListRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        List {
+            ForEach(vitalData, id: \.id) { vital in
+                Topic002ListRowView(vital: vital)
+            }
+        }
     }
 }
