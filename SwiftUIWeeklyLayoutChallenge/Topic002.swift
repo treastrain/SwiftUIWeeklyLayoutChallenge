@@ -43,15 +43,17 @@ public struct Topic002View: View {
     private func value(_ v: Vital.Value) -> some View {
         switch v {
         case .number(let value, let style, let customUnit):
+            let formatter = NumberFormatter()
+            formatter.numberStyle = style
             switch style {
             case .percent:
-                return Text("\(Int(value * 100))")
+                return Text(formatter.string(from: NSNumber(value: value))!)
                     .font(.title)
                 + Text("%")
                     .font(.caption)
                     .foregroundColor(.secondary)
             case .decimal:
-                return Text("\(Int(value))")
+                return Text(formatter.string(from: NSNumber(value: value))!)
                     .font(.title)
                 + Text(customUnit ?? "")
                     .font(.caption)
