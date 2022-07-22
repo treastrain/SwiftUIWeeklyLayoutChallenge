@@ -10,26 +10,35 @@ import SwiftUI
 /// <doc:Topic001>
 public struct Topic001View: View {
     public init() {}
-    
+
+    var text: some View {
+        Text("Hello, world!")
+    }
+
     public var body: some View {
         VStack {
             HStack {
-                Text("Hello, world!")
+                text
                     .layoutPriority(1)
                 Spacer()
-                Text("Hello, world!")
+                text
             }
+
             Spacer()
-            Text("Hello, world!")
-            Spacer()
+
             HStack {
-                Text("Hello, world!")
+                text
+            }
+
+            Spacer()
+
+            HStack {
+                text
                 Spacer()
-                Text("Hello, world!")
+                text
                     .layoutPriority(1)
             }
-        }
-        .padding()
+        }.padding()
     }
 }
 
@@ -38,4 +47,3 @@ struct Topic001View_Previews: PreviewProvider {
         Topic001View()
     }
 }
-
