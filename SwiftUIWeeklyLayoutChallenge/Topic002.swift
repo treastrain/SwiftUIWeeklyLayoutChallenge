@@ -98,7 +98,7 @@ public struct Topic002View: View {
                             Label(v.title, systemImage: v.iconSystemName)
                                 .foregroundColor(v.color)
                             Spacer()
-                            Text(v.date, format: .relative(presentation: Date.RelativeFormatStyle.Presentation.named))
+                            Text(v.date, format: .relative(presentation: .named))
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
@@ -115,7 +115,7 @@ public struct Topic002View: View {
                             Label(v.title, systemImage: v.iconSystemName)
                                 .foregroundColor(v.color)
                             Spacer()
-                            Text(v.date, format: .relative(presentation: Date.RelativeFormatStyle.Presentation.named))
+                            Text(v.date, format: .relative(presentation: .named))
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
