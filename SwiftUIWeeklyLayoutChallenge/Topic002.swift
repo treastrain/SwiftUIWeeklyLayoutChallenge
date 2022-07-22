@@ -34,10 +34,98 @@ fileprivate let vitalData: [Vital] = [
 // MARK: - Views
 /// <doc:Topic002>
 public struct Topic002View: View {
+
+    private var vitals: [Vital] = vitalData
+
     public init() {}
+
+
+    private func value(_ v: Vital.Value) -> some View {
+        switch v {
+        case .number(let value, let style, let customUnit):
+            switch style {
+            case .percent:
+                return Text("\(Int(value * 100))")
+                    .font(.title)
+                + Text("%")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            case .decimal:
+                return Text("\(Int(value))")
+                    .font(.title)
+                + Text(customUnit ?? "")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            default:
+                fatalError()
+            }
+
+        case .dateComponents(let components):
+            return Text("\(Int(components.minute! / 60))")
+                .font(.title)
+            + Text("時間")
+                .font(.caption)
+                .foregroundColor(.secondary)
+            + Text("\(Int(components.minute! % 60))")
+                .font(.title)
+            + Text("分")
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+
+        case .measurement(let value, let unit, let formattedUnit):
+            let symbol = formattedUnit?.symbol ?? unit.symbol
+            return Text(String(format: "%.1f", value))
+                .font(.title)
+            + Text(symbol)
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+    }
     
     public var body: some View {
-        Text("Code your layout here!")
+
+        NavigationView {
+            List(vitals) { v in
+#if os(iOS)
+                VStack(alignment: .leading) {
+                    NavigationLink {
+                        EmptyView()
+                    } label: {
+                        HStack {
+                            Label(v.title, systemImage: v.iconSystemName)
+                                .foregroundColor(v.color)
+                            Spacer()
+                            Text(v.date, format: .relative(presentation: Date.RelativeFormatStyle.Presentation.named))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    value(v.value)
+                        .padding([.top, .bottom], 6)
+                }
+#else
+                NavigationLink {
+                    EmptyView()
+                } label: {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Label(v.title, systemImage: v.iconSystemName)
+                                .foregroundColor(v.color)
+                            Spacer()
+                            Text(v.date, format: .relative(presentation: Date.RelativeFormatStyle.Presentation.named))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+
+                        value(v.value)
+                            .padding([.top, .bottom], 6)
+                    }
+                }
+#endif
+            }
+            .navigationTitle("バイタルデータ")
+        }
     }
 }
 
