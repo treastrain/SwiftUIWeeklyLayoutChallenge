@@ -45,7 +45,7 @@ public struct Topic002View: View {
                     }
                 }
             }
-//            .navigationTitle("バイタルデータ")
+            .navigationTitle("バイタルデータ")
         }
     }
 }
@@ -60,11 +60,9 @@ private struct Topic002ListRowView: View {
     let vital: Vital
     
     var body: some View {
-        HStack {
-            Image(systemName: vital.iconSystemName)
-            Text(vital.title)
-        }
-        .foregroundColor(vital.color)
+        Label(vital.title, systemImage: vital.iconSystemName)
+            .font(.headline)
+            .foregroundColor(vital.color)
     }
 }
 
