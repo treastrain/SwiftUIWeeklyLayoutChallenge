@@ -21,6 +21,21 @@ fileprivate struct Vital: Identifiable {
         case dateComponents(_ dateComponents: DateComponents)
         case measurement(value: Double, unit: Dimension, formattedUnit: Dimension? = nil)
     }
+    
+    func valueString() -> String {
+        switch value {
+        case .number(let value, let style, let customUnit):
+            return "\(value)"
+        case .dateComponents(let dateComponents):
+            return "\(dateComponents)"
+        case .measurement(let value, let unit, let formattedUnit):
+            let measurement = Measurement(
+                value: value,
+                unit: formattedUnit != nil ? formattedUnit! : unit
+            )
+            return "\(measurement)"
+        }
+    }
 }
 
 // MARK: - Sample Data
@@ -60,14 +75,23 @@ private struct Topic002ListRowView: View {
     let vital: Vital
     
     var body: some View {
-        HStack {
-            Label(vital.title, systemImage: vital.iconSystemName)
-                .font(.headline)
-                .foregroundColor(vital.color)
+        VStack {
+            HStack {
+                Label(vital.title, systemImage: vital.iconSystemName)
+                    .font(.subheadline.bold())
+                    .foregroundColor(vital.color)
+                Spacer()
+                Text(vital.date.relativeDateString())
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.vertical, 6)
             Spacer()
-            Text(vital.date.relativeDateString())
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+            Text(vital.valueString())
+                .font(.system(.title, design: .rounded))
+                .fontWeight(.medium)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 6)
         }
     }
     
