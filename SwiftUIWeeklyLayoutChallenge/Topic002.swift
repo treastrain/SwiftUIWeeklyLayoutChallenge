@@ -100,7 +100,7 @@ private struct Topic002ListRowView: View {
 private extension Date {
     func relativeDateString() -> String {
         let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
+        formatter.dateTimeStyle = .named
         return formatter.localizedString(for: self, relativeTo: Date())
     }
 }
