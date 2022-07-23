@@ -60,9 +60,24 @@ private struct Topic002ListRowView: View {
     let vital: Vital
     
     var body: some View {
-        Label(vital.title, systemImage: vital.iconSystemName)
-            .font(.headline)
-            .foregroundColor(vital.color)
+        HStack {
+            Label(vital.title, systemImage: vital.iconSystemName)
+                .font(.headline)
+                .foregroundColor(vital.color)
+            Spacer()
+            Text(vital.date.relativeDateString())
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+        }
+    }
+    
+}
+
+private extension Date {
+    func relativeDateString() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: self, relativeTo: Date())
     }
 }
 
