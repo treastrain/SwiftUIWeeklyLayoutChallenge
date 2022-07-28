@@ -9,89 +9,15 @@ import SwiftUI
 import Combine
 
 /// <doc:Topic003>
-public struct Topic003View: View {
-
-    @StateObject var state: SignalState = .init()
-
-    public init() {}
-    
-    public var body: some View {
-        if #available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *) {
-            #if os(macOS)
-            DepartureSignal(firstColor: state.firstColor, secondColor: state.secondColor, thirdColor: state.thirdColor, forthColor: state.forthColor)
-                .padding()
-            #else
-            if #available(watchOS 7.0, *) {
-                NavigationView {
-                    Form {
-                        Section {
-                            DepartureSignal(firstColor: state.firstColor, secondColor: state.secondColor, thirdColor: state.thirdColor, forthColor: state.forthColor)
-                                .alignmentGuide(HorizontalAlignment.center, computeValue: { d in d[HorizontalAlignment.center] } )
-                        }
-
-                        Section {
-                            Menu {
-                                ForEach(DepartureSignal.Signal.allCases) { signal in
-                                    Button(signal.rawValue) { state.signal = signal }
-                                }
-                            } label: {
-                                Text(state.signal?.rawValue ?? "--------")
-                                    .font(.largeTitle)
-                                    .bold()
-                                    .foregroundColor(.black)
-                                    .fixedSize(horizontal: true, vertical: false)
-                            }
-                            .alignmentGuide(HorizontalAlignment.center, computeValue: { d in d[HorizontalAlignment.center] } )
-                        }
-
-                        Section {
-                            Cell(label: "灯1", position: .first, current: $state.firstColor)
-                            Cell(label: "灯2", position: .second, current: $state.secondColor)
-                            Cell(label: "灯3", position: .third, current: $state.thirdColor)
-                            Cell(label: "灯4", position: .forth, current: $state.forthColor)
-                        }
-                    }
-                    .navigationTitle("出発信号機")
-                }
-            } else {
-                DepartureSignal(firstColor: state.firstColor, secondColor: state.secondColor, thirdColor: state.thirdColor, forthColor: state.forthColor)
-            }
-            #endif
-        } else {
-            Text("Support for this platform is not considered.")
-        }
-    }
-}
-
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
-struct Cell: View {
-    var label: String
-    var position: DepartureSignal.Position
-    @Binding var current: Color?
-
-    var body: some View {
-        HStack {
-            Text(label)
-            Spacer()
-            Picker(label, selection: $current) {
-                ForEach(DepartureSignal.Signal.colorPatternForLight(at: position), id: \.self) { color in
-                    Text(color.label)
-                }
-            }
-            .fixedSize()
-            .pickerStyle(.segmented)
-        }
-    }
-}
-
-final class SignalState: ObservableObject {
+public struct Topic003View: View {
 
     typealias Signal = DepartureSignal.Signal
 
-    @Published var firstColor: Color?
-    @Published var secondColor: Color?
-    @Published var thirdColor: Color?
-    @Published var forthColor: Color?
+    @State var firstColor: Color?
+    @State var secondColor: Color?
+    @State var thirdColor: Color?
+    @State var forthColor: Color?
 
     var signal: Signal? {
         set {
@@ -106,18 +32,120 @@ final class SignalState: ObservableObject {
         }
     }
 
+    func update(signal newValue: Signal?) {
+        firstColor = newValue?.colorForLight(at: .first)
+        secondColor = newValue?.colorForLight(at: .second)
+        thirdColor = newValue?.colorForLight(at: .third)
+        forthColor = newValue?.colorForLight(at: .forth)
+    }
 
-    init() {
-//        firstColor = self.signal?.colorForLight(at: .first)
-//        secondColor = self.signal?.colorForLight(at: .second)
-//        thirdColor = self.signal?.colorForLight(at: .third)
-//        forthColor = self.signal?.colorForLight(at: .forth)
-//
-//        $firstColor.sink { [weak self] color in
-//            self?.signal = .init(first: color, second: nil, thrid: nil, forth: nil)
-//        }.store(in: &cancelable)
+    public init() {}
+    
+    public var body: some View {
+#if os(macOS)
+        DepartureSignal(firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, forthColor: forthColor)
+                        .padding()
+#else
+        if #available(watchOS 7.0, *) {
+            NavigationView {
+                Form {
+                    Section {
+                        DepartureSignal(firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, forthColor: forthColor)
+                            .alignmentGuide(HorizontalAlignment.center, computeValue: { d in d[HorizontalAlignment.center] } )
+                    }
+
+                    Section {
+                        Menu {
+                            ForEach(DepartureSignal.Signal.allCases) { signal in
+                                Button(signal.rawValue) { update(signal: signal) }
+                            }
+                        } label: {
+                            Text(self.signal?.rawValue ?? "--------")
+                                .font(.largeTitle)
+                                .bold()
+                                .foregroundColor(.black)
+                                .fixedSize(horizontal: true, vertical: false)
+                        }
+                        .alignmentGuide(HorizontalAlignment.center, computeValue: { d in d[HorizontalAlignment.center] } )
+                    }
+
+                    Section {
+                        Cell(label: "灯1", position: .first, current: $firstColor)
+                        Cell(label: "灯2", position: .second, current: $secondColor)
+                        Cell(label: "灯3", position: .third, current: $thirdColor)
+                        Cell(label: "灯4", position: .forth, current: $forthColor)
+                    }
+                }
+                .navigationTitle("出発信号機")
+            }
+        } else {
+            DepartureSignal(firstColor: firstColor, secondColor: secondColor, thirdColor: thirdColor, forthColor: forthColor)
+        }
+#endif
     }
 }
+
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+struct Cell: View {
+    var label: String
+    var position: DepartureSignal.Position
+    @Binding var current: Color?
+
+    var body: some View {
+        HStack {
+            Text(label)
+            Spacer()
+            Picker(selection: $current) {
+                ForEach(DepartureSignal.Signal.colorPatternForLight(at: position), id: \.self) { color in
+                    Text(color.label)
+                }
+            } label: {
+                EmptyView()
+            }
+            .fixedSize()
+        #if os(macOS)
+            .pickerStyle(.menu)
+        #else
+            .pickerStyle(.segmented)
+        #endif
+        }
+    }
+}
+
+//final class SignalState: ObservableObject {
+//
+//    typealias Signal = DepartureSignal.Signal
+//
+//    @Published var firstColor: Color?
+//    @Published var secondColor: Color?
+//    @Published var thirdColor: Color?
+//    @Published var forthColor: Color?
+//
+//    var signal: Signal? {
+//        set {
+//            firstColor = newValue?.colorForLight(at: .first)
+//            secondColor = newValue?.colorForLight(at: .second)
+//            thirdColor = newValue?.colorForLight(at: .third)
+//            forthColor = newValue?.colorForLight(at: .forth)
+//        }
+//
+//        get {
+//            Signal(first: firstColor, second: secondColor, thrid: thirdColor, forth: forthColor)
+//        }
+//    }
+//
+//
+//    init() {
+////        firstColor = self.signal?.colorForLight(at: .first)
+////        secondColor = self.signal?.colorForLight(at: .second)
+////        thirdColor = self.signal?.colorForLight(at: .third)
+////        forthColor = self.signal?.colorForLight(at: .forth)
+////
+////        $firstColor.sink { [weak self] color in
+////            self?.signal = .init(first: color, second: nil, thrid: nil, forth: nil)
+////        }.store(in: &cancelable)
+//    }
+//}
 
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 struct DepartureSignal: View {
