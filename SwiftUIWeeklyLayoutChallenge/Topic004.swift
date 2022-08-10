@@ -25,8 +25,7 @@ public struct Topic004View: View {
     private var content: some View {
         VStack(spacing: 30) {
             Text(number.formatted())
-                .font(.system(.largeTitle, design: .monospaced))
-                .fontWeight(.black)
+                .font(.system(.largeTitle, design: .monospaced).weight(.black))
                 .scaleEffect(2)
             HStack {
                 Button {
