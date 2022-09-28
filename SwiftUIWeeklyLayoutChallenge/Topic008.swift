@@ -54,7 +54,54 @@ fileprivate struct NavigationContentView: View {
     ]
     
     var body: some View {
-        Text("Code your layout here!")
+        ScrollView {
+            ForEach(appInfo) { info in /// `List` で書くとどのようになるでしょうか
+                AppView(info: info)
+                if appInfo.last != info {
+                    Divider()
+                        .padding(.leading, AppView.appIconSize + AppView.horizontalSpacing)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+        }
+        .navigationTitle("App")
+    }
+}
+
+@available(iOS 15.0, *)
+fileprivate struct AppView: View {
+    static let horizontalSpacing: CGFloat = 8
+    static let appIconSize: CGFloat = 64
+    
+    let info: AppInfo
+    
+    var body: some View {
+        HStack(spacing: Self.horizontalSpacing) {
+            Image(systemName: "app.fill")
+                .resizable()
+                .foregroundColor(info.color)
+                .frame(width: Self.appIconSize, height: Self.appIconSize)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(info.name)
+                    .lineLimit(2)
+                Text(info.subtitle)
+                    .lineLimit(1)
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            Button {
+                print(#function)
+            } label: {
+                Text("入手")
+                    .font(.headline)
+                    .padding(.horizontal, 8)
+            }
+            .buttonStyle(.bordered)
+            .buttonBorderShape(.capsule)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 #endif
@@ -64,4 +111,3 @@ struct Topic008View_Previews: PreviewProvider {
         Topic008View()
     }
 }
-
