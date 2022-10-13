@@ -54,7 +54,34 @@ fileprivate struct NavigationContentView: View {
     ]
     
     var body: some View {
-        Text("Code your layout here!")
+        ScrollView {
+            VStack {
+                Divider()
+                    .padding(.horizontal)
+                GeometryReader { geometryProxy in
+                    TabView {
+                        ForEach(Array(stride(from: 0, to: appInfo.count, by: 3)), id: \.self) { index in
+                            VStack {
+                                AppView(info: appInfo[index])
+                                if index + 1 < appInfo.count {
+                                    Divider()
+                                    AppView(info: appInfo[index + 1])
+                                }
+                                if index + 2 < appInfo.count {
+                                    Divider()
+                                    AppView(info: appInfo[index + 2])
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                    }
+                    .frame(width: geometryProxy.size.width, alignment: .center)
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                }
+                .frame(height: 230)
+            }
+        }
+        .navigationTitle("App")
     }
 }
 
